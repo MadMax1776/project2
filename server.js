@@ -22,8 +22,8 @@ db.on('open', () => {
     console.log('Connection made!');
 });
 
-app.get('/', () => {
-  res.send('roll tide');
+app.get('/', (req, res) => {
+  res.send('your application is working');
 });
 
 
