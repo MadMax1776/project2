@@ -22,6 +22,29 @@ db.on('open', () => {
     console.log('Connection made!');
 });
 
+////===================================================
+
+const wines = require('./models/wine.js');
+
+
+
+
+app.get('/wines/', (req, res) => {
+    res.render('index.ejs',
+  {
+    allWines: wines
+  });
+});
+
+app.get('/wines/:indexOfWinesArray', (req, res) => {
+  res.render('show.ejs', {
+    wines: wines[req.params.indexOfWinesArray]
+  });
+});
+
+
+
+////==================================================
 app.get('/', (req, res) => {
   res.send('your application is working');
 });
