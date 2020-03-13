@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Wine Page</h1>
+    <form action="/wines/<%=index%>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%=wines.name%>"/><br/>
+      Color: <input type="text" name="color" value="<%=wines.color%>"/><br/>
+      Country: <input type="text" name="country" value="<%=wines.country%>"/><br/>
+      <input type="submit" value="Submit Changes"/>
+    </form>
+  </body>
+</html>
