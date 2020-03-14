@@ -34,7 +34,7 @@ app.get('/wines/new', (req, res) => {
 
 app.post('/wines/', (req, res)=>{
   Wine.create(req.body, (error, createdWine) => {
-      res.send(createdWine);
+      res.redirect('/wines')
   });
 });
 
@@ -42,6 +42,14 @@ app.get('/wines', (req, res) => {
   Wine.find({}, (error, allWines) => {
     res.render('index.ejs', {
       wines: allWines
+    });
+  });
+});
+
+app.get('/wines/:id', (req, res) => {
+  Wine.findById(req.params.id, (err, foundWine) => {
+    res.render('show.ejs', {
+      wine: foundWine
     });
   });
 });

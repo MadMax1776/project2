@@ -10,11 +10,16 @@
 
     <ul>
       <% for(let i = 0; i < wines.length; i++) { %>
-        <li><%=wines[i].name; %></li>
+        <li>
+          <a href="/wines/<%=wines[i].id%>">
+            <%=wines[i].name; %>
+          </a>
+        </li>
      <% } %>
+
     </ul>
     <nav>
-    <a href="/fruits/new">Create a New Fruit</a>
+    <a href="/wines/new">Create a New Wine</a>
     </nav>
   </body>
 </html>
