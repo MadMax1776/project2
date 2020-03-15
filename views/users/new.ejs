@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+          body {
+            background-color: #ccffcc;
+          }
+
+          h2 {
+            font-size: 40px;
+
+          }
+
+          .header1 {
+            text-align: center;
+            font-size: 50px;
+            width: 100%;
+            background-color: #004d00;
+          }
+
+          .header1 > a {
+            font-size: 50px;
+            color: red;
+          }
+
+          .header1 a:hover {
+            text-decoration: none;
+
+            color: #000000;
+          }
+
+          .form-control {
+            display: block;
+            width: 25%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.45;
+            border: 1px solid #0099ff;
+            border-radius: 5px;
+          }
+
+          #Register {
+            margin-top: 1%;
+            background-color: #004d00;
+            border: 1px solid #dcb239;
+            box-shadow: 3px 3px 5px 0px grey;
+            width: 100px;
+            height: 50px;
+            font-size: 25px;
+            color: red;
+
+          }
+
+          #Register:hover {
+            background-color: #000000;
+          }
+        </style>
+    </head>
+    <body>
+      <div class = "header1">
+        <a href="/">Vino.</a>
+      </div>
+      <div class = "container">
+        <h2><strong>Register and enhance your business!!!</strong></h2>
+        <form action="/users" method="POST">
+           <input class="form-control" type="text" name="username" placeholder="Username"/><br/>
+           <input class="form-control" type="password" name="password" placeholder="Password"/><br/>
+          <input id="Register" type="submit" value="Register"/>
+        </form>
+      </div>
+    </body>
+</html>

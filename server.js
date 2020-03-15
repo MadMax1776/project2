@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const methodOverride = require('method-override');
 const session = require('express-session');
+const bcryptjs = require('bcryptjs');
 const db = mongoose.connection;
 const dbupdateobject = {
     useNewUrlParser: true,
@@ -29,6 +30,18 @@ app.use(methodOverride('_method'));
 
 const winesController = require('./controllers/wine.js');
 app.use('/wines', winesController);
+
+const usersController = require('./controllers/users.js');
+app.use('/users', usersController);
+
+const sessionController = require('./controllers/session.js');
+app.use('/session', sessionController);
+
+
+app.get('/', (req, res) => {
+  res.render('home.ejs');
+});
+
 ////================CRUD========================================
 // const Wine = require('./models/wine.js');
 //
@@ -136,9 +149,9 @@ app.use('/wines', winesController);
 
 
 ////================================================================
-app.get('/', (req, res) => {
-  res.send('your application is working');
-});
+// app.get('/', (req, res) => {
+//   res.send('your application is working');
+// });
 
 
 

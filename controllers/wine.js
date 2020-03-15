@@ -9,17 +9,33 @@ router.get('/seed', (req, res) => {
             {
                 name:'Max',
                 color:'white',
-                country:'Chile'
+                country:'Chile',
+                year: 2015,
+                qty: 100,
+                price: '$20.00',
+                alcoholContent: '13.5%',
+                description: 'With granitic soils and a sandy loam texture, the 19.3 hectare vineyard is the winery’s symbol. Classic Bordeaux varieties, such as Cabernet Sauvignon, Merlot and Petit Verdot, in addition to Malbec and Syrah are grown here. It is also the place of origin of our renowned wines Don Maximiano Founder’s Reserve and La Cumbre Syrah.'
             },
             {
                 name:'Casillero Del Diablo',
                 color:'red',
-                country:'Chile'
+                country:'Chile',
+                year: 2010,
+                qty: 40,
+                price: '$18.00',
+                alcoholContent: '14%',
+                description: 'Outstanding in the Super Premium segment, Casillero del Diablo Reserva Privada shows all its elegance and sophistication in its three superior-quality varieties.'
             },
             {
-                name:'Kindzmarauli',
+                name:'Khvanchkara',
                 color:'red',
-                country:'Republic of Georgia'
+                country:'Republic of Georgia',
+                year: 2010,
+                qty: 40,
+                price: '$100.00',
+                alcoholContent: '11.5%',
+                description: `One would imagine that marketing anything as it being 'Stalin's favorite' would be the kiss of death for that product, but apparently not so for this Georgian semi-sweet wine Khvanchkara. `
+
             }
         ],
         (err, data) => {
@@ -32,7 +48,7 @@ router.get('/seed', (req, res) => {
 
 
 router.get('/new', (req, res) => {
-  res.render('new.ejs');
+  res.render('wines/new.ejs');
 });
 
 router.post('/', (req, res)=>{
@@ -43,7 +59,7 @@ router.post('/', (req, res)=>{
 
 router.get('/', (req, res) => {
   Wine.find({}, (error, allWines) => {
-    res.render('index.ejs', {
+    res.render('wines/index.ejs', {
       wines: allWines
     });
   });
@@ -51,7 +67,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   Wine.findById(req.params.id, (err, foundWine) => {
-    res.render('show.ejs', {
+    res.render('wines/show.ejs', {
       wine: foundWine
     });
   });
@@ -66,7 +82,7 @@ router.delete('/:id', (req, res)=>{
 router.get('/:id/edit', (req, res) => {
   Wine.findById(req.params.id, (err, foundWine) => { //find the wine
     res.render(
-      'edit.ejs',
+      'wines/edit.ejs',
       {
         wine: foundWine ////insert found wine
       }
