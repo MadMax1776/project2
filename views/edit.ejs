@@ -6,10 +6,10 @@
   </head>
   <body>
     <h1>Edit Wine Page</h1>
-    <form action="/wines/<%=index%>?_method=PUT" method="POST">
-      Name: <input type="text" name="name" value="<%=wines.name%>"/><br/>
-      Color: <input type="text" name="color" value="<%=wines.color%>"/><br/>
-      Country: <input type="text" name="country" value="<%=wines.country%>"/><br/>
+    <form action="/wines/<%=wine.id%>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%=wine.name%>"/><br/>
+      Color: <input type="text" name="color" value="<%=wine.color%>"/><br/>
+      Country: <input type="text" name="country" value="<%=wine.country%>"/><br/>
       <input type="submit" value="Submit Changes"/>
     </form>
   </body>
