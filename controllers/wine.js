@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Wine = require('../models/wine.js');
 
-
+//// you have to do wines/seed in order to seed data
 router.get('/seed', (req, res) => {
   Wine.create(
     [
@@ -12,7 +12,8 @@ router.get('/seed', (req, res) => {
                 country:'Chile',
                 year: 2015,
                 qty: 100,
-                img: 'src="/imgs/maxWine.jpg"',
+                img: '/imgs/maxWine.jpg',
+                // https://www.flickr.com/photos/186673375@N04/49667200517/in/dateposted-public/
                 price: '$20.00',
                 alcoholContent: '13.5%',
                 description: 'With granitic soils and a sandy loam texture, the 19.3 hectare vineyard is the winery’s symbol. Classic Bordeaux varieties, such as Cabernet Sauvignon, Merlot and Petit Verdot, in addition to Malbec and Syrah are grown here. It is also the place of origin of our renowned wines Don Maximiano Founder’s Reserve and La Cumbre Syrah.'

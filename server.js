@@ -55,7 +55,15 @@ app.get('/suppliers', (req, res) => {
   res.render('suppliers/crimes.ejs');
 });
 
+app.get('/suppliers2', (req, res) => {
+  // res.send('test');
+  res.render('suppliers/michelle.ejs');
+});
 
+app.get('/suppliers3', (req, res) => {
+  // res.send('test');
+  res.render('suppliers/yellowTail.ejs');
+});
 ////================CRUD========================================
 // const Wine = require('./models/wine.js');
 //
