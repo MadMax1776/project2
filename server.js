@@ -12,7 +12,11 @@ const dbupdateobject = {
     useFindAndModify: false
 };
 
+/////=======STATIC=============================================
+app.use(express.static('public'));
+app.use(express.static('files'));
 
+/////==========================================================
 
 // Connect to Mongo
 mongoose.connect(process.env.DATABASE_URL, dbupdateobject);

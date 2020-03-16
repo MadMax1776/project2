@@ -12,6 +12,7 @@ router.get('/seed', (req, res) => {
                 country:'Chile',
                 year: 2015,
                 qty: 100,
+                img: 'src="/imgs/maxWine.jpg"',
                 price: '$20.00',
                 alcoholContent: '13.5%',
                 description: 'With granitic soils and a sandy loam texture, the 19.3 hectare vineyard is the winery’s symbol. Classic Bordeaux varieties, such as Cabernet Sauvignon, Merlot and Petit Verdot, in addition to Malbec and Syrah are grown here. It is also the place of origin of our renowned wines Don Maximiano Founder’s Reserve and La Cumbre Syrah.'
@@ -22,6 +23,7 @@ router.get('/seed', (req, res) => {
                 country:'Chile',
                 year: 2010,
                 qty: 40,
+                img: '',
                 price: '$18.00',
                 alcoholContent: '14%',
                 description: 'Outstanding in the Super Premium segment, Casillero del Diablo Reserva Privada shows all its elegance and sophistication in its three superior-quality varieties.'
@@ -32,6 +34,7 @@ router.get('/seed', (req, res) => {
                 country:'Republic of Georgia',
                 year: 2010,
                 qty: 40,
+                img: '',
                 price: '$100.00',
                 alcoholContent: '11.5%',
                 description: `One would imagine that marketing anything as it being 'Stalin's favorite' would be the kiss of death for that product, but apparently not so for this Georgian semi-sweet wine Khvanchkara. `

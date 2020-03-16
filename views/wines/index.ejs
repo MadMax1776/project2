@@ -8,30 +8,143 @@
 
     <style>
 /* body {background-color: blue;} */
+body {
+  background-color: #ccffcc;
+}
+
+h1 {
+  font-size: 40px;
+
+}
+
+.header1 {
+  text-align: center;
+  font-size: 50px;
+  width: 100%;
+  background-color: #004d00;
+}
+
+.header1 > a {
+  font-size: 50px;
+  color: red;
+}
+
+.header1 a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+#Delete {
+  margin-top: 1%;
+  background-color: #004d00;
+  border: 1px solid #dcb239;
+  box-shadow: 3px 3px 5px 0px grey;
+  width: 70px;
+  height: 30px;
+  font-size: 15px;
+  color: red;
+
+}
+
+#Delete:hover {
+  background-color: #000000;
+}
+
+#Edit {
+  margin-top: 1%;
+  background-color: #000000;
+  border: 1px solid #dcb239;
+  box-shadow: 3px 3px 5px 0px grey;
+  width: 70px;
+  height: 30px;
+  font-size: 15px;
+  color: red;
+
+}
+
+#Edit:hover {
+  background-color: #004d00;
+}
+
+a {
+  font-size: 25px;
+  color: red;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+#Upload {
+  margin-top: 10%;
+  background-color: #000000;
+  border: 1px solid #dcb239;
+  box-shadow: 3px 3px 5px 0px grey;
+  width: 70px;
+  height: 30px;
+  font-size: 20px;
+  color: red;
+}
+
+#Upload:hover {
+  background-color: #004d00;
+}
+
+.footer1 {
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+  background-color: #004d00;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer1 > a {
+  font-size: 30px;
+  color: red;
+}
+
+.footer1 a:hover {
+  text-decoration: none;
+  color: #000000;
+}
   </style>
   </head>
   <body>
-    <h1>Your Wines</h1>
+    <div class = "header1">
+      <a href="/">Vino.</a>
+    </div>
+    <h1>Your Wines:</h1>
 
-    <ul>
+    <ol>
       <% for(let i = 0; i < wines.length; i++) { %>
         <li>
+
           <a href="/wines/<%=wines[i].id%>">
             <%=wines[i].name; %>
           </a>
           <form action="/wines/<%=wines[i].id; %>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE"/>
+            <input id="Delete" type="submit" value="DELETE"/>
           </form>
-          <a href="/wines/<%=wines[i].id;%>/edit">Edit</a>
+          <form action="/wines/<%=wines[i].id;%>/edit">
+            <input id="Edit" type="submit" value="Edit" />
+          </form>
         </li>
      <% } %>
 
-    </ul>
-    <nav>
+   </ol>
 
-    <a href="/wines/new">Create a New Wine</a>
-    </nav>
+   <!-- <form action="href="/wines/new"">
+     <input id="Upload" type="submit" value="Upload a New Wine"
+   </form> -->
+    <!-- <nav>
 
+    <a href="/wines/new">Upload a New Wine</a>
+    </nav> -->
+    <div class = "footer1">
+      <a href="/wines/new">Upload a New Wine.</a>
+    </div>
 
   </body>
 </html>
