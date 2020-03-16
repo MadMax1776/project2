@@ -1,3 +1,151 @@
-body {
+/* body {
   background-color: blue;
-};
+}; */
+
+body {background-color: #ccffcc;}
+
+
+.block1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #5f9ea0;
+  color: white;
+  font-size: 10px;
+  height: 300px;
+  width: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 8px;
+  font: arial;
+  text-align: center;
+}
+
+.block1 > img {
+height: 300px;
+width: 95%;
+text-align: center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.links {
+  font-size: 15px;
+}
+
+.text1 {
+  /* display: flex; */
+  text-align: left;
+  width: 37%;
+  position: absolute;
+  margin: 0 auto;
+  margin-left: 20px;
+  top: 20%;
+  left: 0;
+  right: 0;
+  float: left;
+}
+
+.text1 > h2 {
+  font-size: 30px;
+}
+
+.block2 {
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  height: 40px;
+}
+
+
+
+.block2 {
+  height: 50px;
+}
+
+
+.homeButton {
+  width: 10%;
+  height: 50px;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+.links2 {
+  width: 85%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 15px;
+  margin-top: 7px;
+}
+
+.homeButton .title {
+  color: white;
+  margin-left: 2.5%;
+  letter-spacing: 1px;
+  font-size: 25px;
+  font-family: 'Bowlby ONE SC', sans-serif;
+  margin-left: 20px;
+}
+
+.title:hover {
+  text-decoration: none;
+}
+
+.links2 a {
+  color: white;
+  margin-left: 2.5%;
+  font-family: 'Raleway', sans-serif;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+  /* color: #e600e6; */
+}
+
+.links2 a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #192534;
+}
+
+h1 {
+  text-align: center;
+}
+
+.cards1 {
+  display: flex;
+  /* width: 85%; */
+  height: 300px;
+  /* text-align: center; */
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cards1 > img {
+  width: 220px;
+  height: 250px;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#crimes {
+  margin-left: 20px;
+  width: 220px;
+  height: 250px;
+}
+
+#Chateau {
+  /* margin-left: 50px; */
+  width: 220px;
+  height: 250px;
+}
+
+#tail {
+  margin-right: 20px;
+  width: 220px;
+  height: 250px;
+}

@@ -41,10 +41,20 @@ app.use('/users', usersController);
 const sessionController = require('./controllers/session.js');
 app.use('/session', sessionController);
 
+// const supplyController = require('./controllers/supply.js');
+// app.use('/supplier', supplyController);
+
 
 app.get('/', (req, res) => {
   res.render('home.ejs');
 });
+
+/////================Image Click Test ============================
+app.get('/suppliers', (req, res) => {
+  // res.send('test');
+  res.render('suppliers/crimes.ejs');
+});
+
 
 ////================CRUD========================================
 // const Wine = require('./models/wine.js');
