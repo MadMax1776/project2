@@ -24,7 +24,7 @@ router.get('/seed', (req, res) => {
                 country:'Chile',
                 year: 2010,
                 qty: 40,
-                img: '',
+                img: '/imgs/diablo.jpg',
                 price: '$18.00',
                 alcoholContent: '14%',
                 description: 'Outstanding in the Super Premium segment, Casillero del Diablo Reserva Privada shows all its elegance and sophistication in its three superior-quality varieties.'
@@ -35,7 +35,7 @@ router.get('/seed', (req, res) => {
                 country:'Republic of Georgia',
                 year: 2010,
                 qty: 40,
-                img: '',
+                img: '/imgs/StalinWine.jpg',
                 price: '$100.00',
                 alcoholContent: '11.5%',
                 description: `One would imagine that marketing anything as it being 'Stalin's favorite' would be the kiss of death for that product, but apparently not so for this Georgian semi-sweet wine Khvanchkara. `

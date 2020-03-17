@@ -2,15 +2,106 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Vino</title>
+    <style>
+      body {
+        background-color: #ccffcc;
+      }
+
+      h1 {
+        font-size: 40px;
+
+      }
+
+      .header1 {
+        text-align: center;
+        font-size: 50px;
+        width: 100%;
+        background-color: #004d00;
+      }
+
+      .header1 > a {
+        font-size: 50px;
+        color: red;
+      }
+
+      .header1 a:hover {
+        text-decoration: none;
+
+        color: #000000;
+      }
+
+      .form-control {
+        display: block;
+        width: 25%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.45;
+        border: 1px solid #0099ff;
+        border-radius: 5px;
+      }
+
+      #Edit {
+        margin-top: 1%;
+        background-color: #004d00;
+        border: 1px solid #dcb239;
+        box-shadow: 3px 3px 5px 0px grey;
+        width: 200px;
+        height: 50px;
+        font-size: 25px;
+        color: red;
+
+      }
+
+      #Edit:hover {
+        background-color: #000000;
+      }
+
+      .footer1 {
+        text-align: center;
+        font-size: 30px;
+        width: 100%;
+        background-color: #004d00;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .footer1 > a {
+        font-size: 30px;
+        color: #000000;
+      }
+      .footer1 > img {
+        height: 300px;
+        width: 100%;
+      }
+
+      .footer1 a:hover {
+        text-decoration: none;
+        color: #ff1a1a;
+      }
+    </style>
   </head>
   <body>
-    <h1>Edit Wine Page</h1>
+    <div class = "header1">
+      <a href="/">Vino.</a>
+    </div>
+    <h1>Edit Your Wine Product</h1>
     <form action="/wines/<%=wine.id%>?_method=PUT" method="POST">
-      Name: <input type="text" name="name" value="<%=wine.name%>"/><br/>
-      Color: <input type="text" name="color" value="<%=wine.color%>"/><br/>
-      Country: <input type="text" name="country" value="<%=wine.country%>"/><br/>
-      <input type="submit" value="Submit Changes"/>
+      Name: <input class="form-control" type="text" name="name" value="<%=wine.name%>"/><br/>
+      Color: <input class="form-control" type="text" name="color" value="<%=wine.color%>"/><br/>
+      Country: <input class="form-control" type="text" name="country" value="<%=wine.country%>"/><br/>
+      Year: <input class="form-control" type="text" name="year"/><br/>
+      Quantity: <input class="form-control" type="text" name="qty"/><br/>
+      Price: <input class="form-control" type="text" name="price"/><br/>
+      Alcohol: <input class="form-control" type="text" name="alcoholContent"/><br/>
+      Description: <input class="form-control" type="text" name="description"/><br/>
+      <input id="Edit" type="submit" value="Submit Changes"/>
     </form>
+    <!-- <div class = "footer1">
+      <!-- <img src="/imgs/vineyard.jpg"> -->
+      <!-- <a href="/wines">Back to Your Wine</a> -->
+    <!-- </div> --> 
   </body>
 </html>

@@ -58,6 +58,19 @@
       text-decoration: none;
       color: #ff1a1a;
     }
+
+    img {
+      margin-left: 20px;
+      width: 220px;
+      height: 250px;
+      position: relative;
+      align-items: center;
+      text-align: center;
+      align-content: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
     </style>
   </head>
   <body>
@@ -65,17 +78,17 @@
       <a href="/">Vino.</a>
     </div>
     <h1><%=wine.name; %></h1>
-
+    <img src=<%=wine.img; %> </p>
     <p>The <%=wine.name; %> wine is <%=wine.color; %> and it is from <%=wine.country; %>. It is a <%=wine.year; %> bottle which costs <%=wine.price; %> and has an alcohol content of <%=wine.alcoholContent; %> We have <%=wine.qty; %> bottles of this wine in stock.
 
     A description of the wine provided by the producer is as follows:
     <%=wine.description; %>
-    <img src=<%=wine.img; %> </p>
+    <!-- <img src=<%=wine.img; %> </p> -->
     <!-- <nav>
     <a href="/wines">Back to Index</a>
   </nav> -->
   <div class = "footer1">
-    <img src="/imgs/vineyard.jpg">
+    <!-- <img src="/imgs/vineyard.jpg"> -->
     <a href="/wines">Back to Your Wine</a>
   </div>
   </body>

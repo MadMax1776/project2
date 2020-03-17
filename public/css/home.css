@@ -2,7 +2,14 @@
   background-color: blue;
 }; */
 
-body {background-color: #ccffcc;}
+body {background-color: #4dff88}
+
+
+.signIn {
+  display: flex;
+
+}
+
 
 
 .block1 {
@@ -12,42 +19,54 @@ body {background-color: #ccffcc;}
   color: white;
   font-size: 10px;
   height: 300px;
-  width: auto;
+  width: 100%;
   margin-bottom: 20px;
   margin-top: 10px;
   font-size: 8px;
   font: arial;
   text-align: center;
+  align-items: center;
+  align-content: center;
 }
 
 .block1 > img {
 height: 300px;
-width: 95%;
+width: 100%;
 text-align: center;
 display: block;
 margin-left: auto;
 margin-right: auto;
 }
 
-.links {
+/* .links {
   font-size: 15px;
-}
+} */
 
 .text1 {
   /* display: flex; */
   text-align: left;
   width: 37%;
   position: absolute;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   margin-left: 20px;
-  top: 20%;
+  margin-bottom: 200px;
+  top: 5%;
   left: 0;
   right: 0;
+  bottom: 500;
   float: left;
+  align-items: center;
+  align-content: center;
 }
 
 .text1 > h2 {
-  font-size: 30px;
+  font-size: 50px;
+  color: #e6ffe6;
+}
+
+.text1 > h3 {
+  font-size: 25px;
+  color: #e6ffe6;
 }
 
 .block2 {
